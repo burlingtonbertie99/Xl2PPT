@@ -6,7 +6,7 @@ from pptx.util import Inches
 excel_file = "Table_Template2.xlsx"
 sheet_name = "Sheet2"  # Worksheet 2 (name or index)
 data_range = "A1:D5"   # Change as needed
-pptx_file = "LloydsSlideTemplate.pptx"
+pptx_file = "slidetemplate.pptx"
 output_pptx = "updated_presentation.pptx"
 slide_index = 0  # 0-based index (Slide 1)
 
