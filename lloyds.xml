@@ -1,0 +1,16 @@
+<Workflow xmlns="urn:wexflow-schema" id="911" name="Lloyds01" description="">
+	<Settings>
+		<Setting name="launchType" value="trigger" />
+		<Setting name="enabled" value="true" />
+		<Setting name="approval" value="false" />
+		<Setting name="enableParallelJobs" value="true" />
+		<Setting name="retryCount" value="0" />
+		<Setting name="retryTimeout" value="1500" />
+	</Settings>
+	<LocalVariables />
+	<Tasks>
+		<Task id="1" name="FilesExist" description="" enabled="true">
+			<Setting name="file" value="/pCloudDrive/Work/Lloyds/Governance/Table_Template.xlsx" />
+		</Task>
+	</Tasks>
+</Workflow>
