@@ -1,0 +1,42 @@
+<Workflow xmlns="urn:wexflow-schema" id="333" name="fartfile.txt" description="">
+	<Settings>
+		<Setting name="launchType" value="trigger" />
+		<Setting name="enabled" value="true" />
+		<Setting name="approval" value="false" />
+		<Setting name="enableParallelJobs" value="true" />
+		<Setting name="retryCount" value="0" />
+		<Setting name="retryTimeout" value="1500" />
+	</Settings>
+	<LocalVariables />
+	<Tasks>
+		<Task id="1" name="FileExists" description="" enabled="true">
+			<Setting name="file" value="C:\Users\chris\Documents\fartfile.txt" />
+		</Task>
+		<Task id="2" name="ProcessLauncher" description="" enabled="true">
+			<Setting name="processPath" value="notepad.exe" />
+			<Setting name="hideGui" value="false" />
+			<Setting name="generatesFiles" value="false" />
+			<Setting name="ignoreExitCode" value="false" />
+		</Task>
+		<Task id="3" name="ProcessLauncher" description="" enabled="true">
+			<Setting name="processPath" value="chrome.exe" />
+			<Setting name="hideGui" value="false" />
+			<Setting name="generatesFiles" value="false" />
+			<Setting name="ignoreExitCode" value="false" />
+		</Task>
+	</Tasks>
+	<ExecutionGraph>
+		<If id="100" parent="-1" if="1">
+			<Do>
+				<Task id="2">
+					<Parent id="-1" />
+				</Task>
+			</Do>
+			<Else>
+				<Task id="3">
+					<Parent id="-1" />
+				</Task>
+			</Else>
+		</If>
+	</ExecutionGraph>
+</Workflow>
